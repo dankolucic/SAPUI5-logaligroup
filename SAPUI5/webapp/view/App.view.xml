@@ -1,12 +1,28 @@
-<mvc:View controllerName="logaligroup.SAPUI5.controller.App" 
-        xmlns="sap.m"  xmlns:mvc="sap.ui.core.mvc">
-     <Button text="{i18n>showHelloButtonText}" press=".handleButton"></Button>   
-    <Input 
-        value="{dataModel>/recipient/name}"
-        description="Hello {dataModel>/recipient/name}"
-        valueLiveUpdate="true"
-        width="60%"
-    ></Input>
+<mvc:View 
+    controllerName="logaligroup.SAPUI5.controller.App" 
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true">
+    <Shell>
+        <App>
+            <pages>
+                <Page title="{i18n>appTitle}" >
+                    <content>
+                            <Panel headerText="{i18n>helloPanel}" class="sapUiResponsiveMargin" width="auto">
+                                <content>
+                                    <Button text="{i18n>showHelloButtonText}" press=".handleButton" class="sapUiSmallMarginEnd"/> 
+                                    <Input 
+                                        value="{dataModel>/recipient/name}"
+                                        valueLiveUpdate="true"
+                                        width="60%"/>
+                                    <Text text="Hello {dataModel>/recipient/name}" class="sapUiSmallMargin boldElements sapthemeHighlight-asColor" />
+                            </content>
+                            </Panel>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
     
     <!-- <Text text="Hello word escrito en App.view.xml instanciado en index.js!!"></Text> -->
 </mvc:View>
