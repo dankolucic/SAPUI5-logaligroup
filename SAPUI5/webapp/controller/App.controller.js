@@ -1,14 +1,10 @@
 sap.ui.define([
     // En este arreglo del método define, se hace la definición asíncrona de módulos (ADM: asincronal module definition)
     "sap/ui/core/mvc/Controller",
-    "sap/m/MessageToast",
-    // "logaligroup/SAPUI5/model/Models",
-    // "sap/ui/model/resource/ResourceModel"
 ],
 
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
-     * @param {typeof sap.m.MessageToast} MessageToast
      */
     function (Controller, MessageToast) {
         "use strict";
@@ -24,17 +20,11 @@ sap.ui.define([
                 // this.getView().setModel(i18nModel, "i18n");
             },
 
+            onOpenDialogHeader: function (){
+                this.getOwnerComponent().openHelloDialog();
 
-
-            handleButton: function () {
-
-                //read text from i18n model
-                let oBundle = this.getView().getModel("i18n").getResourceBundle();
-                //read property from data model
-                let sRecipient = this.getView().getModel("dataModel").getProperty("/recipient/name");
-                let sMsg = oBundle.getText("helloMsg", [sRecipient]);
-                MessageToast.show(sMsg);
             }
+
         });
 
     }
