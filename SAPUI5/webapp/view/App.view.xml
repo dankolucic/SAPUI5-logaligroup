@@ -16,11 +16,11 @@
                     </headerContent>
                     <content>
                       <mvc:XMLView viewName="logaligroup.SAPUI5.view.HelloPanel" />
+                      <mvc:XMLView viewName="logaligroup.SAPUI5.view.InvoicesList" />
                     </content>
                 </Page>
             </pages>
         </App>
     </Shell>
     
-    <!-- <Text text="Hello word escrito en App.view.xml instanciado en index.js!!"></Text> -->
 </mvc:View>
